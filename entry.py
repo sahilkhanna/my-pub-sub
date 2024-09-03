@@ -1,6 +1,6 @@
-from project import Project
+from mypubsub import MyPubSub
 
 print("Called from entry.py")
 
-p = Project()
-p.main()
+p = MyPubSub()
+p.publish('topic1', 'hello world')

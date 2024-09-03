@@ -1,5 +1,10 @@
-from . import modules
+"""
+This module provides the MyPubSub class for publish-subscribe pattern implementation.
+
+It includes methods for subscribing, unsubscribing, and publishing messages to topics.
+"""
 from typing import Callable
+from . import modules
 
 class MyPubSub(modules.SingletonBase):
     """A Pub Sub Singleton Class"""
@@ -7,7 +12,7 @@ class MyPubSub(modules.SingletonBase):
         if not hasattr(self, 'initialized'):  # Prevent re-initialization
             self.initialized = True
             self._subscribers = {}
-    
+
     def subscribe(self, topic:str, callback:Callable):
         """Subscribe to a topic with a callback function."""
         if topic not in self._subscribers:
