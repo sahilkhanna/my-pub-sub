@@ -38,6 +38,13 @@ class SingletonBase(metaclass=SingletonMeta):
             del cls._instances[cls]
 
     @classmethod
+    def reset_all_instances(cls):
+        """
+        Reset all the singleton instance. Useful for testing or reinitialization.
+        """
+        cls._instances = {}
+
+    @classmethod
     def get_instance_count(cls):
         """
         Get the count of instances created (should be 1 for singletons).
