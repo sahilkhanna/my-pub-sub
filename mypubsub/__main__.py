@@ -12,7 +12,6 @@ from mypubsub import MyPubSub
 def main():
     print("Called from main()")
     p = MyPubSub()
-    p.main()
 
 if __name__ == "__main__":
     print("Called from __main__.py")

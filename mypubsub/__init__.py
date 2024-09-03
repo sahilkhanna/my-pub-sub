@@ -2,6 +2,7 @@ from . import modules
 from typing import Callable
 
 class MyPubSub(modules.SingletonBase):
+    """A Pub Sub Singleton Class"""
     def __init__(self):
         if not hasattr(self, 'initialized'):  # Prevent re-initialization
             self.initialized = True
